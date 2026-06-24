@@ -398,7 +398,7 @@
             regionSource("aside", page.labels.aside),
             regionSource("footer", page.labels.footer),
             "        </div>",
-            '        <script src="https://cdn.jsdelivr.net/gh/emilhs9/Cosmic-BG@main/cosmicbg.js" defer></script>',
+            '        <script src="https://cdn.jsdelivr.net/gh/emilhs9/Cosmic-BG@main/cosmicbg.js" data-lift-content="false" defer></script>',
             '        <script src="site.js"></script>',
             "    </body>",
             "</html>"

@@ -1,3 +1,10 @@
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body.grid-page {
     --dock-clearance: 120px;
     --page-x-space: clamp(72px, 12vw, 170px);
@@ -96,6 +103,10 @@ body.is-leaving .site-dock {
     transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
+body.cosmic-bg-active.cosmic-bg-lift > .site-dock {
+    position: fixed !important;
+}
+
 .site-preloader {
     position: fixed;
     inset: 0;
@@ -104,6 +115,12 @@ body.is-leaving .site-dock {
     place-items: center;
     background: rgba(5, 7, 18, 0.96);
     transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+body.cosmic-bg-active.cosmic-bg-lift > .site-preloader,
+body.cosmic-bg-active.cosmic-bg-lift > .code-panel,
+body.cosmic-bg-active.cosmic-bg-lift > .cursor-spark {
+    position: fixed !important;
 }
 
 .site-preloader.done {
