@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid 1</title>
+        <link rel="stylesheet" href="site.css" />
+        <style>
+            :root { --panel: #FDDB00; }
+
+            body   { grid-area: b; background: #151515; }
+            header { grid-area: h; background: var(--panel);}
+            nav    { grid-area: n; background: var(--panel);}
+            main   { grid-area: m; background: var(--panel);}
+            aside  { grid-area: a; background: var(--panel);}
+            footer { grid-area: f; background: var(--panel);}
+
+            #container {
+                display: grid;
+                gap: 6px;
+                background: white;
+                grid-template-rows: 70fr 272fr 60fr;
+                grid-template-columns: 121fr 376fr 91fr;
+                grid-template-areas: 'h h h'
+                                     'n m a'
+                                     'f f f'
+            }
+
+            #container > * {
+                box-sizing: border-box;
+                padding: 18px 16px;
+                font: 16px "Times New Roman", serif;
+            }
+
+            @media only screen and (max-width: 700px) {
+                #container > * { padding: 14px 12px; }
+            }
+        </style>
+    </head>
+    <body class="grid-page" data-grid="1">
+        <div id="container">
+            <header>Header</header>
+            <nav>Nav</nav>
+            <main>Article</main>
+            <aside>Ads</aside>
+            <footer>Footer</footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/gh/emilhs9/Cosmic-BG@main/cosmicbg.js" defer></script>
+        <script src="site.js"></script>
+    </body>
+</html>
